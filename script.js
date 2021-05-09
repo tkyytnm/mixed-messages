@@ -49,14 +49,14 @@ const messages = {
 
 const res = [];
 
-const createMessage = () => {
+const createMessage = (messages) => {
   for (let prop in messages) {
     res.push(messages[prop][randomIndex(prop)]);
   }
 };
 
 const printMessage = () => {
-  createMessage();
+  createMessage(messages);
   console.log(`It's a ${res.join(" ")}!`);
 };
 
